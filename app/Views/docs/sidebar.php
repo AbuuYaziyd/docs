@@ -1,10 +1,20 @@
 <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
     <div class="main-menu-content">
-        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            <li class=" nav-item"><a href="../ecommerce-menu-template" target="_blank">
+        <ul class="navigation navigation-main" data-menu="menu-navigation">
+            <li class="active nav-item"><a href="<?= base_url() ?>">
                     <i class="la la-home"></i><span class="menu-title" data-i18n="eCommerce"><?= lang('app.home') ?></span></a>
             </li>
-            <li class=" nav-item"><a href="#"><i class="la la-briefcase"></i><span class="menu-title" data-i18n="Project">Project</span></a>
+            <li class=" nav-item"><a href="#"><i class="la la-lock"></i><span class="menu-title" data-i18n="Project"><?= lang('app.auth') ?></span></a>
+                <ul class="menu-content">
+                    <li><a class="menu-item" href="project-summary.html"><i></i><span data-i18n="Project Summary">Project Summary</span></a>
+                    </li>
+                    <li><a class="menu-item" href="project-tasks.html"><i></i><span data-i18n="Project Task">Project Task</span></a>
+                    </li>
+                    <li><a class="menu-item" href="project-bugs.html"><i></i><span data-i18n="Project Bugs">Project Bugs</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href="#"><i class="la la-briefcase"></i><span class="menu-title" data-i18n="Project"><?= lang('app.student') ?></span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="project-summary.html"><i></i><span data-i18n="Project Summary">Project Summary</span></a>
                     </li>

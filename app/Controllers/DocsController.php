@@ -8,7 +8,7 @@ class DocsController extends BaseController
 {
     public function index()
     {
-        $data['title'] = lang('app.documentation');
+        $data['title'] = lang('app.home');
 
         return view('docs/index', $data);
     }
