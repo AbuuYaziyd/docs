@@ -52,25 +52,6 @@
                     <ul class="nav navbar-nav mr-auto float-left">
                         <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand" href="#"><i class="ficon ft-maximize"></i></a></li>
                     </ul>
-                    <ul class="nav navbar-nav float-right">
-                        <li class="dropdown dropdown-language nav-item">
-                            <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <?php if (session('lang') == 'ar') : ?>
-                                    <i class="flag-icon flag-icon-sa"></i>
-                                <?php elseif (session('lang') == 'sw') : ?>
-                                    <i class="flag-icon flag-icon-tz"></i>
-                                <?php endif ?>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown-flag">
-                                <a class="dropdown-item" href="<?= base_url('locale/sw') ?>" data-language="sw">
-                                    <i class="flag-icon flag-icon-tz"></i> Kiswahili
-                                </a>
-                                <a class="dropdown-item" href="<?= base_url('locale/ar') ?>" data-language="fr">
-                                    <i class="flag-icon flag-icon-sa"></i> العربية
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -81,12 +62,38 @@
 
     <!-- BEGIN: Content-->
     <div class="app-content content">
-        <div class="content-overlay"></div>
         <div class="content-wrapper">
-            <div class="content-header row"></div>
-            <div class="content-body">
-                <?= $this->renderSection('content') ?>
+            <div class="content-header row">
+                <div class="content-header-left col-12 mb-1">
+                    <h2 class="content-header-title">
+                        <?= $title ?>
+                        <div class="btn-group float-right">
+                            <button class="btn btn-outline-dark dropdown-toggle mb-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <?php if (session('lang') == 'ar') : ?>
+                                    <i class="flag-icon flag-icon-sa"></i>
+                                <?php elseif (session('lang') == 'sw') : ?>
+                                    <i class="flag-icon flag-icon-tz"></i>
+                                <?php endif ?>
+                            </button>
+                            <div class="dropdown-menu arrow">
+                                <a class="dropdown-item" href="<?= base_url('locale/sw') ?>">
+                                    <i class="flag-icon flag-icon-tz"></i> Kiswahili
+                                </a>
+                                <a class="dropdown-item" href="<?= base_url('locale/ar') ?>">
+                                    <i class="flag-icon flag-icon-sa"></i> العربية
+                                </a>
+                            </div>
+                        </div>
+                    </h2>
+                </div>
+                <div class="content-header-right breadcrumbs-right breadcrumbs-top col-md-6 col-12">
+                    <div class="breadcrumb-wrapper col-12">
+                        <ol class="breadcrumb">
+                        </ol>
+                    </div>
+                </div>
             </div>
+            <?= $this->renderSection('content') ?>
         </div>
     </div>
     <!-- END: Content-->
@@ -96,7 +103,13 @@
 
     <!-- BEGIN: Footer-->
     <footer class="footer footer-static footer-light navbar-border navbar-shadow">
-        <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2019 <a class="text-bold-800 grey darken-2" href="https://1.envato.market/modern_admin" target="_blank">PIXINVENT</a></span><span class="float-md-right d-none d-lg-block">Hand-crafted & Made with<i class="ft-heart pink"></i><span id="scroll-top"></span></span></p>
+        <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+            <span class="float-md-left d-block d-md-inline-block"><?= lang('app.allRightsReserved') ?> &copy; <?= date('Y') ?> <a class="text-bold-800 grey darken-2" href="<?= base_url() ?>" ><?= lang('app.appName') ?></a></span>
+            <span class="float-md-right d-none d-lg-block"><?= lang('app.appName') ?>
+                <i class="ft-sun pink"></i>
+                <span id="scroll-top"></span> V 2.0
+            </span>
+        </p>
     </footer>
     <!-- END: Footer-->
 

@@ -4,7 +4,7 @@
             <li class="active nav-item"><a href="<?= base_url() ?>">
                     <i class="la la-home"></i><span class="menu-title" data-i18n="eCommerce"><?= lang('app.home') ?></span></a>
             </li>
-            <li class=" nav-item"><a href="#"><i class="la la-lock"></i><span class="menu-title" data-i18n="Project"><?= lang('app.auth') ?></span></a>
+            <!-- <li class=" nav-item"><a href="#"><i class="la la-lock"></i><span class="menu-title" data-i18n="Project"><?= lang('app.auth') ?></span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="project-summary.html"><i></i><span data-i18n="Project Summary">Project Summary</span></a>
                     </li>
@@ -51,7 +51,7 @@
                         </ul>
                     </li>
                 </ul>
-            </li>
+            </li> -->
         </ul>
     </div>
 </div>
