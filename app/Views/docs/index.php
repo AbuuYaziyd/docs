@@ -2,15 +2,6 @@
 
 <?= $this->section('content') ?>
 <div class="row">
-    <div class="content-header">
-        <div class="btn-group float-right">
-            <button class="btn btn-info dropdown-toggle mb-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
-            <div class="dropdown-menu arrow"><a class="dropdown-item" href="#"><i class="fa fa-calendar-check mr-1"></i> Calender</a><a class="dropdown-item" href="#"><i class="fa fa-cart-plus mr-1"></i> Cart</a><a class="dropdown-item" href="#"><i class="fa fa-life-ring mr-1"></i> Support</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
     <div class="col-xl-6 col-12">
         <div class="card">
             <div class="card-header">
