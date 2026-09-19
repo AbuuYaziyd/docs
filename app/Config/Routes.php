@@ -1,6 +1,4 @@
 <?php
 
-use CodeIgniter\Router\RouteCollection;
-
-/** @var RouteCollection $routes */
-$routes->get('/', 'Home::index');
+$routes->get('/', 'DocsController::index');
+$routes->get('locale/(:any)', 'DocsController::locale/$1');
